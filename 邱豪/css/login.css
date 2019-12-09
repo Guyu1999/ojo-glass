@@ -1,0 +1,114 @@
+.margin {
+  width: 996px;
+  margin: 0 auto; }
+
+header {
+  height: 95px; }
+  header img {
+    margin: 20px 0 0 4px;
+    float: left; }
+  header span {
+    float: right;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #000;
+    margin-top: 40px; }
+
+main {
+  background: #e31939 url("../imgs/login-banner.jpg") no-repeat center;
+  height: 475px; }
+  main .loginbox {
+    background: #fff;
+    float: right;
+    height: 400px;
+    width: 346px;
+    margin-top: 40px; }
+    main .loginbox ul {
+      margin: 25px 20px; }
+      main .loginbox ul li {
+        margin-top: 20px; }
+        main .loginbox ul li h3 {
+          height: 40px; }
+          main .loginbox ul li h3 span {
+            font-size: 18px;
+            color: #000;
+            float: left; }
+          main .loginbox ul li h3 a {
+            float: right;
+            color: #e31939; }
+        main .loginbox ul li #user {
+          text-indent: 40px;
+          background: url("../imgs/user1.png") no-repeat left;
+          padding: 13px 0;
+          width: 304px;
+          border: 1px solid #ddd;
+          margin-top: 3px; }
+        main .loginbox ul li #pass {
+          text-indent: 40px;
+          background: url("../imgs/pass.png") no-repeat left;
+          padding: 13px 0;
+          width: 304px;
+          border: 1px solid #ddd;
+          margin-top: 3px; }
+        main .loginbox ul li #code {
+          float: left;
+          text-indent: 40px;
+          background: url("../imgs/m.png") no-repeat left;
+          padding: 13px 0;
+          width: 100px;
+          border: 1px solid #ddd;
+          margin-top: 3px; }
+        main .loginbox ul li #vcode {
+          float: left;
+          color: #000;
+          width: 70px;
+          height: 30px;
+          background: #e56b80;
+          display: inline-block;
+          margin: 8px 0 0 5px;
+          text-align: center;
+          line-height: 30px;
+          cursor: pointer; }
+        main .loginbox ul li .find {
+          float: right; }
+        main .loginbox ul li .loginnow {
+          width: 300px;
+          height: 35px;
+          background: #e31939;
+          text-align: center;
+          display: block;
+          color: #fff;
+          line-height: 35px; }
+      main .loginbox ul .flink a {
+        padding: 0 20px 0 26px;
+        height: 22px;
+        display: inline-block;
+        line-height: 22px; }
+      main .loginbox ul .flink #wechat {
+        background: url("../imgs/wechat-icon.png") no-repeat left; }
+      main .loginbox ul .flink #qq {
+        background: url("../imgs/qq.png") no-repeat left; }
+      main .loginbox ul .flink #sina {
+        background: url("../imgs/sina-icon.png") no-repeat left; }
+      main .loginbox ul .flink #pay {
+        background: url("../imgs/pay-icon.png") no-repeat left; }
+
+footer {
+  text-align: center;
+  height: 121px; }
+
+footer .sm ul {
+  height: 16px;
+  margin-top: 24px;
+  margin-left: 165px;
+  display: block; }
+
+footer .sm ul li {
+  float: left; }
+
+footer .sm ul li a {
+  padding: 0 13px; }
+
+footer .sm p {
+  font: 12px/20px "";
+  color: #666; }
