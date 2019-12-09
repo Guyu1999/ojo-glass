@@ -1,0 +1,119 @@
+.margin {
+  width: 1020px;
+  margin: 0 auto; }
+
+header {
+  height: 95px;
+  box-shadow: 1px 1px 10px #666; }
+  header img {
+    margin: 15px 0 0 4px;
+    float: left; }
+  header span {
+    float: right;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #000;
+    margin-top: 40px; }
+
+main {
+  margin-bottom: 50px; }
+  main form {
+    border-radius: 3px;
+    padding: 30px 30px 0px 30px;
+    margin-top: 50px;
+    box-shadow: 1px 1px 10px #999;
+    height: 615px; }
+    main form .login {
+      margin-top: 30px;
+      color: #555;
+      float: right; }
+      main form .login a {
+        width: 99px;
+        height: 35px;
+        border: 1px solid #dfddde;
+        display: inline-block;
+        text-align: center;
+        line-height: 35px;
+        background: -moz-linear-gradient(top, #efefef 0%, #fafafa 100%);
+        border-radius: 3px; }
+    main form dl {
+      width: 620px;
+      border-right: 1px dashed #ddd;
+      float: left; }
+      main form dl dt {
+        font-size: 18px;
+        color: #555; }
+      main form dl dd {
+        margin-top: 20px; }
+        main form dl dd input {
+          padding: 13px;
+          border: 1px solid #d5d5d5;
+          width: 249px; }
+        main form dl dd #reg-code {
+          width: 164px; }
+        main form dl dd .vcode {
+          display: inline-block;
+          width: 70px;
+          height: 30px;
+          color: #000;
+          background: #e66b80;
+          line-height: 30px;
+          text-align: center;
+          cursor: pointer; }
+        main form dl dd #reg-tel {
+          width: 149px; }
+        main form dl dd .telcode {
+          color: #fff;
+          background: #f62648;
+          width: 100px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          display: inline-block;
+          cursor: pointer; }
+        main form dl dd #agreement {
+          width: 12px;
+          height: 12px;
+          margin-left: 94px; }
+        main form dl dd strong {
+          width: 250px;
+          height: 35px;
+          background: #f62648;
+          text-align: center;
+          line-height: 35px;
+          color: #fff;
+          display: inline-block;
+          margin-left: 90px;
+          border-radius: 3px;
+          cursor: pointer; }
+        main form dl dd i a {
+          color: #0000ff; }
+        main form dl dd span {
+          display: inline-block;
+          width: 94px;
+          height: 40px;
+          text-align: right;
+          font-size: 14px;
+          color: #555; }
+        main form dl dd u {
+          color: #f00; }
+
+footer {
+  text-align: center;
+  height: 121px; }
+
+footer .sm ul {
+  height: 16px;
+  margin-top: 24px;
+  margin-left: 165px;
+  display: block; }
+
+footer .sm ul li {
+  float: left; }
+
+footer .sm ul li a {
+  padding: 0 13px; }
+
+footer .sm p {
+  font: 12px/20px "";
+  color: #666; }
