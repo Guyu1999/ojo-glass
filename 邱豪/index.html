@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div id="top">
+    <div id="top" class="vip">
         <div class="margin">
             <div class="top-l">
                 <h3>
@@ -124,9 +124,13 @@
             </dl>
         </div>
     </nav>
-    <div id="banner">
-        <div class="bigP">
+    <div id="banner" class="banner1">
+        <div class="imgbox1">
             <img src="imgs/banner1.jpg" alt="图片加载失败，刷新页面..">
+            <img src="imgs/banner2.jpg" alt="图片加载失败，刷新页面..">
+            <img src="imgs/banner3.jpg" alt="图片加载失败，刷新页面..">
+            <img src="imgs/banner4.jpg" alt="图片加载失败，刷新页面..">
+            <img src="imgs/banner5.jpg" alt="图片加载失败，刷新页面..">
         </div>
         <div class="promise">
             <div class="margin">
@@ -134,6 +138,7 @@
             </div>
         </div>
     </div>
+    
     <div id="advert">
         <div class="margin clear">
             <div class="advert-l">
@@ -141,9 +146,13 @@
                 <div class="advert-l-b">
                     <p>
                         <span class="typeon">网站公告</span>
-                        <span>订单状态查询</span>
+                        <span class="ding">订单状态查询</span>
                     </p>
-                    <ul>
+                    <div class="ding1">
+                        <input type="text" placeholder="请输入订单号">
+                        <a href="#">查询</a>
+                    </div>
+                    <ul class="typeon1">
                         <li><a href="#">为什么OJO眼镜网的价格要比实</a></li>
                         <li><a href="#">OJO眼镜网的优势</a></li>
                         <li><a href="#">那个眼镜网的配镜比较好？</a></li>
@@ -200,15 +209,13 @@
         </div>
     </div>
     
-    <div id="hotbuy">
+    <div id="hotbuy" class="vip">
         <div class="margin">
             <h3>
                 <img src="imgs/hotbuy.png" alt="">
                 <span>距离本场结束：</span>
                 <ul>
-                    <li>11：</li>
-                    <li>11：</li>
-                    <li>11</li>
+                    <li><strong id="intime"></strong><span id="endinner"></span></li>
                 </ul>
                 <a href="#">查看所有 &gt;</a>
             </h3>
@@ -299,7 +306,7 @@
 
     <main>
         <div class="margin">
-            <div id="f1">
+            <div id="f1" class="vip">
                 <div  class="f1-l">
                     <h3 class="title">
                         <i>1</i>
@@ -396,7 +403,7 @@
                 </div>
             </div>
 
-            <div id="f2">
+            <div id="f2" class="vip">
                 <div  class="f1-l">
                     <h3 class="title">
                         <i>2</i>
@@ -552,7 +559,7 @@
             <img src="imgs/paybao.png">
         </div>
     </div>
-    <footer>
+    <footer class="vip">
         <div class="margin">
             <h4>
                 <span>友情链接：</span><a href="#">CULE眼镜网</a>
@@ -591,5 +598,17 @@
             </div>
         </div>
     </footer>
+    <div id="floor">
+        <ul>
+            <li class="redstyle">顶部</li>
+            <li>限时抢</li>
+            <li>1F眼镜</li>
+            <li>2F眼镜</li>
+            <li>底部</li>
+        </ul>
+    </div>
 </body>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.banner.1.js"></script>
+<script src="js/index.js"></script>
 </html>
