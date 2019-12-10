@@ -13,6 +13,9 @@ body {
   color: #666; }
   #top .top-l {
     float: left; }
+    .welcome{
+      display:none;
+    }
     #top .top-l h3 {
       float: left;
       margin-left: 5px;
@@ -446,6 +449,24 @@ main {
           background: url("../imgs/bg1.png") 0 -90px;
           text-indent: 64px;
           width: 136px; }
+
+      main .imgbox{
+        position: relative;
+        height:250px;
+
+      }
+      main .imgbox img{
+        position: absolute;
+      }
+      main .imgbox2{
+        position: relative;
+        height:250px;
+
+      }
+      main .imgbox2 img{
+        position: absolute;
+      }
+
       main #f1 .f1-l .rank h3 {
         height: 52px;
         font: 16px/52px "";
@@ -732,7 +753,7 @@ footer {
     #floor{
       position:fixed;
       right:50px;
-      bottom:200px;
+      bottom:100px;
     }
     #floor ul li{
       height:50px;

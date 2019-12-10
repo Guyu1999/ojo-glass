@@ -11,6 +11,28 @@
         delayTime:4000,
         moveTime:400
     })
+    //轮播图2
+    $(".imgbox").banner({
+        items:$(".imgbox").find("img"),
+        // left:$(".imgbox").find("#left"),
+        // right:$(".imgbox").find("#right"),
+        list:true,
+        index:0,
+        autoPlay:true,
+        delayTime:4000,
+        moveTime:400
+    })
+    //轮播图3
+    $(".imgbox2").banner({
+        items:$(".imgbox2").find("img"),
+        // left:$(".imgbox").find("#left"),
+        // right:$(".imgbox").find("#right"),
+        list:true,
+        index:0,
+        autoPlay:true,
+        delayTime:4000,
+        moveTime:400
+    })
     //advert功能
     function advert(){
         var myspan = document.querySelector(".typeon");
