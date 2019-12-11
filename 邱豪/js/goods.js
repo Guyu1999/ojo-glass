@@ -1,6 +1,6 @@
-;(function(){
+;(function($){
     "use strict"
-
+//登录状态
     class Index{
         constructor(){
             this.login = document.querySelector(".login");
@@ -34,5 +34,22 @@
         }
     }
     new Index();
+    //二级菜单
+    function list2(){
+        $(".listnav").children("li").hover(function(){
+			$(this)
+			.children(".lastmenu")
+			.stop()
+			.show(200)
+			.parent()
+			.siblings()
+			.children(".lastmenu")
+			.stop()
+			.hide(200);
+		},function(){
+            $(".lastmenu").css({display:"none"})
+        })
+    }
+    list2();
 
-})()
+})(jQuery)

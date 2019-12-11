@@ -151,117 +151,165 @@ header #header-r .cart1 {
 header #header-r .cart1:hover {
   color: #f42424; }
 
-nav {
-  background: #fff;
-  height: 39px;
-  border-bottom: 2px solid #c31d1d; }
+  nav {
+    background: #fff;
+    height: 39px;
+    border-bottom: 2px solid #c31d1d; }
+    nav dl #bigmenu {
+      font: 14px/39px "";
+      width: 230px;
+      height: 39px;
+      background: #f42424 url("../imgs/xiajian2.png") no-repeat 160px;
+      color: #fff;
+      text-align: center;
+      font-weight: 700;
+      float: left;
+      cursor: pointer; }
+    nav dl dd {
+      float: left;
+      font: 14px/39px "";
+      width: 94px;
+      height: 39px;
+      text-align: center; }
+      nav dl dd a {
+        color: #555;
+        font-weight: 700; }
+        nav dl dd a:hover {
+          color: #f42424; }
+    nav dl dd.firsta a {
+      color: #f42424; }
+    nav dl dd.lasta {
+      width: 110px; }
+  
+  
+    nav dl #bigmenu{
+      position: relative;
+    }
+    nav dl #bigmenu:hover .smallmenu{
+      display:block;
+    }
+    nav dl #bigmenu .smallmenu{
+      display:none;
+      text-align: left;
+      z-index: 12;
+      position: absolute;
+      width:230px;
+      height:500px;
+      background:rgba(0,0,0,0.4);
+      top:39px;
+    }
 
-nav dl dt {
-  font: 14px/39px "";
-  width: 230px;
-  height: 39px;
-  background: #f42424 url("../imgs/xiajian2.png") no-repeat 160px;
-  color: #fff;
-  text-align: center;
-  font-weight: 700;
-  float: left;
-  cursor: pointer; }
-
-nav dl dd {
-  float: left;
-  font: 14px/39px "";
-  width: 94px;
-  height: 39px;
-  text-align: center; }
-
-nav dl dd a {
-  color: #555;
-  font-weight: 700; }
-
-nav dl dd a:hover {
-  color: #f42424; }
-
-nav dl dd.firsta a {
-  color: #f42424; }
-
-nav dl dd.lasta {
-  width: 110px; }
-
-nav dl #bigmenu {
-  position: relative; }
-
-nav dl #bigmenu .smallmenu {
-  text-align: left;
-  z-index: 12;
-  position: absolute;
-  width: 230px;
-  height: 500px;
-  background: rgba(0, 0, 0, 0.4);
-  top: 39px; }
-
-nav dl #bigmenu .smallmenu ul li {
-  width: 196px;
-  height: 69px;
-  padding: 10px 15px;
-  overflow: hidden; }
-
-nav dl #bigmenu .smallmenu ul li p {
-  height: 34px; }
-
-nav dl #bigmenu .smallmenu ul li p i {
-  margin-right: 5px; }
-
-nav dl #bigmenu .smallmenu ul li a {
-  color: #bfbfbf;
-  margin-left: 5px; }
-
-nav dl #bigmenu .smallmenu ul li a:hover {
-  color: #f00; }
-
-nav dl #bigmenu .smallmenu ul li:hover {
-  background: #000; }
-
-nav dl #bigmenu .smallmenu ul li p.glass i {
-  background: url("../imgs/banner-bg.png") no-repeat 0 -4px;
-  width: 30px;
-  height: 12px;
-  display: inline-block; }
-
-nav dl #bigmenu .smallmenu ul li p.glass1 i {
-  background: url("../imgs/banner-bg.png") no-repeat 0 -25px;
-  width: 30px;
-  height: 12px;
-  display: inline-block; }
-
-nav dl #bigmenu .smallmenu ul li p.glass2 i {
-  background: url("../imgs/banner-bg.png") no-repeat 0 -40px;
-  width: 30px;
-  height: 18px;
-  display: inline-block; }
-
-nav dl #bigmenu .smallmenu ul li p.glass3 i {
-  background: url("../imgs/banner-bg.png") no-repeat 0 -66px;
-  width: 30px;
-  height: 12px;
-  display: inline-block; }
-
-nav dl #bigmenu .smallmenu .b {
-  padding: 3px 15px; }
-
-nav dl #bigmenu .smallmenu .b strong {
-  margin-right: 5px; }
-
-nav dl #bigmenu .smallmenu .b1 {
-  padding: 3px 15px; }
-
-nav dl #bigmenu .smallmenu .b1 strong {
-  margin-right: 5px; }
-
-nav dl #bigmenu .smallmenu .b1 strong:hover {
-  color: #f00; }
-
-nav dl #bigmenu .smallmenu .b span:hover {
-  color: #f00; }
+    .smallmenu ul li .lastmenu{
+      display:none;
+      width:785px;
+      height:498px;
+      border:1px solid #bcbcbc;
+      position: absolute;
+      left:230px;
+      top:0px;
+    }
+    .smallmenu .lastmenu .menu-l{
+      width:531px;
+      height:498px;
+      background:#fff;
+      border-right:1px solid #bcbcbc;
+      float:left;
+    }
+    .smallmenu .lastmenu .menu-l dl{
+      height:56px;
+      border-bottom:1px solid #e7e7e7;
+      width:495px;
+      display: flex;
+    }
+    .smallmenu .lastmenu .menu-l dl dt{
+      font-size:17px;
+      font-weight: 700;
+      padding:0 12px;
+      width:48px;
+      color:#f00;
+      line-height: 16px;
+      margin-top:15px;
+    }
+    .smallmenu .lastmenu .menu-l dl dd{
+      margin-top:5px;
+      text-align: left;
+      color:#000;
+      font-size:12px;
+    }
+    .smallmenu .lastmenu .menu-l dl dd a{
+      color:#333;
+    }
+    .smallmenu .lastmenu .menu-r{
+      background:#f9f9f9;
+      height:498px;
+      float: right;
+      width:253px;
+      padding:20px;
+      box-sizing: border-box;
+    }
+    .smallmenu .lastmenu .menu-r h5{
+      color:#f00;
+    }
+    nav dl #bigmenu .smallmenu ul li{
+      width:196px;
+      height:69px;
+      padding:10px 15px;
+      overflow: hidden;
+    }
+    nav dl #bigmenu .smallmenu ul li p{
+      height:34px;
+    }
+    nav dl #bigmenu .smallmenu ul li p i{
+      margin-right:5px;
+    }
+    nav dl #bigmenu .smallmenu ul li a{
+      color:#bfbfbf;
+      margin-left:5px;
+    }
+    nav dl #bigmenu .smallmenu ul li a:hover{
+      color:#f00;
+    }
+    nav dl #bigmenu .smallmenu ul li:hover{
+      background:#000;
+    }
+    nav dl #bigmenu .smallmenu ul li p.glass i{
+      background:url("../imgs/banner-bg.png")no-repeat 0 -4px;
+      width:30px;height:12px;
+      display: inline-block;
+    }
+    nav dl #bigmenu .smallmenu ul li p.glass1 i{
+      background:url("../imgs/banner-bg.png")no-repeat 0 -25px;
+      width:30px;height:12px;
+      display: inline-block;
+    }
+    nav dl #bigmenu .smallmenu ul li p.glass2 i{
+      background:url("../imgs/banner-bg.png")no-repeat 0 -40px;
+      width:30px;height:18px;
+      display: inline-block;
+    }
+    nav dl #bigmenu .smallmenu ul li p.glass3 i{
+      background:url("../imgs/banner-bg.png")no-repeat 0 -66px;
+      width:30px;height:12px;
+      display: inline-block;
+    }
+    nav dl #bigmenu .smallmenu .b{
+      padding:3px 15px;
+    }
+    nav dl #bigmenu .smallmenu .b strong{
+      margin-right:5px;
+    }
+    nav dl #bigmenu .smallmenu .b1{
+      padding:3px 15px;
+    }
+    nav dl #bigmenu .smallmenu .b1 strong{
+      margin-right:5px;
+    }
+    nav dl #bigmenu .smallmenu .b1 strong:hover{
+      color:#f00;
+    }
+    nav dl #bigmenu .smallmenu .b span:hover{
+      color:#f00;
+    }
 
 #status {
   height: 36px;
