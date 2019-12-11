@@ -364,6 +364,7 @@ main .goodslist {
         box-shadow: 0px 0px 7px #666;
       }
       main .goodslist ul li img {
+        cursor: pointer;
         width: 260px;
         height: 186px; }
       main .goodslist ul li .goods-price span {
@@ -378,10 +379,22 @@ main .goodslist {
         color: #b9b9b9;
         float: right; }
       main .goodslist ul li p {
+        position: relative;
         font: 12px/25px "";
         color: #333; }
+        main .goodslist ul li p a{
+          display:block;
+          height:25px;
+        }
         main .goodslist ul li p a:hover {
           color: #f99; }
+          main .goodslist ul li p em{
+            width:100px;height:20px;background:#f99;
+            color:#000;
+            border-radius:10px;
+            color:#fff;cursor: pointer;text-align: center;
+            padding:5px;position: absolute;right:0;
+          }
 
 main .page ul {
   height: 36px;

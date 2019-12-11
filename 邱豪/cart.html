@@ -65,8 +65,8 @@
                         <tr>
                             <td colspan="7" class="now">您的购物车中没有任何商品！</td>
                         </tr>
-                        <tr class="goods">
-                            <td><input type="checkbox"></td>
+                        <!-- <tr class="goods"> -->
+                            <!-- <td><input type="checkbox"></td>
                             <td class="imgs">
                                 <img src="imgs/goods.png" alt="">
                                 <span>
@@ -78,14 +78,14 @@
                             <td><input type="number" min=1 id="num" value="1"></td>
                             <td></td>
                             <td class="delete">删除</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="7"><b>清空购物车</b>
                                 <p>
                                     <strong>商品总价（不含运费）：</strong>
-                                    <span>￥368.00</span>
+                                    <span id="total" style="width:50px;display:inline-block;">0</span>
                                 </p>
                             </td>
                         </tr>
@@ -194,6 +194,7 @@
         </div>
     </footer>
 </body>
+<script src="js/ajax.js"></script>
 <script src="js/cookie.js"></script>
 <script src="js/cart.js"></script>
 </html>
