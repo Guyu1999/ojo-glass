@@ -144,9 +144,9 @@
 			.siblings()
 			.children(".lastmenu")
 			.stop()
-			.hide(200);
+			.hide(300);
 		},function(){
-            $(".lastmenu").css({display:"none"})
+            $(".lastmenu").stop().hide(300);
         })
     }
     list2();
@@ -209,6 +209,7 @@
                 if(target.className == "details"){
                     that.id = target.parentNode.parentNode.getAttribute("index");
                     that.setCookie();
+                    window.location.href = "details.html";
                 }
             })
             this.hotgoods.addEventListener("click",function(eve){
@@ -217,6 +218,7 @@
                 if(target.className == "details1"){
                     that.id = target.parentNode.parentNode.getAttribute("index");
                     that.setCookie();
+                    window.location.href = "details.html";
                 }
             })
         }
@@ -247,6 +249,4 @@
         }
     }
     new List;
-
-
 })(jQuery)

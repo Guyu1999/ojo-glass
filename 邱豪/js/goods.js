@@ -47,7 +47,7 @@
 			.stop()
 			.hide(200);
 		},function(){
-            $(".lastmenu").css({display:"none"})
+            $(".lastmenu").stop().hide(300);
         })
     }
     list2();
