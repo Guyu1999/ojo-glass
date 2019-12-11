@@ -97,10 +97,6 @@
             this.welcome = document.querySelector(".welcome");
             this.user = this.welcome.querySelector("strong");
             this.exit = this.welcome.querySelector("em");
-            console.log(this.login)
-            console.log(this.welcome)
-            console.log(this.user)
-            console.log(this.exit)
             
             this.addEvent();
             this.getMsg();
@@ -128,6 +124,23 @@
         }
     }
     new Index();
+    //二级菜单
+    function list2(){
+        $(".listnav").children("li").hover(function(){
+			$(this)
+			.children(".lastmenu")
+			.stop()
+			.show(200)
+			.parent()
+			.siblings()
+			.children(".lastmenu")
+			.stop()
+			.hide(200);
+		},function(){
+            $(".lastmenu").css({display:"none"})
+        })
+    }
+    list2();
 
 
 })(jQuery)
