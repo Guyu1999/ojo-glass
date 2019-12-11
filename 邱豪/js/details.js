@@ -124,5 +124,15 @@
     }
     new Magnifier();
 
-
+    //轮播图
+    $(".imgbox").banner({
+        items:$(".imgbox").find("img"),
+        left:$(".imgbox").find("#left"),
+        right:$(".imgbox").find("#right"),
+        list:false,
+        index:0,
+        autoPlay:false,
+        delayTime:4000,
+        moveTime:400
+    })
 })(jQuery)

@@ -319,8 +319,10 @@ main .snva {
     color: #333; }
 
 main .goodsinfo {
-  height: 600px; }
+  height:636px;
+   }
   main .goodsinfo .info-l {
+    height: 600px;
     float: left; }
     main .goodsinfo .info-l .sBox {
       width: 440px;
@@ -349,6 +351,19 @@ main .goodsinfo {
       width: 1300px;
       height: 1300px;
       position: absolute; }
+      main .goodsinfo .info-l .imgbox{
+        position: relative;
+        height:97px;width:440px;
+        border:1px solid #ddd;
+      }
+      main .goodsinfo .info-l .imgbox img{
+        width:59px;height:59px;
+        border:1px solid #ddd;
+        float: left;
+        margin:17px 40px;
+      }
+      .btns #left{left:0;position: absolute;height:40px;top:30px;background:none;border:none;}
+      .btns #right{right:0;position: absolute;height:40px;top:30px;background:none;border:none;}
   main .goodsinfo .info-m {
     margin: 0 20px;
     float: left;
