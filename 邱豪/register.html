@@ -23,7 +23,7 @@
                     <dd>
                         <span>账户名：</span>
                         <input type="text" id="reg-user">
-                        <u>*</u>
+                        <u id="name1">*</u>
                     </dd>
                     <dd>
                         <span>设置密码：</span>
@@ -66,52 +66,7 @@
             </form>
         </div>
     </main>
-    <script src="js/cookie.js"></script>
-    <script>
-        class Register{
-            constructor(){
-                this.user = document.getElementById("reg-user");
-                this.pass = document.getElementById("reg-pass1");
-                this.reg = document.getElementById("reg");
-                this.span = document.querySelector("u");
 
-                this.addEvent();
-            }
-            addEvent(){
-                var that = this;
-                this.reg.onclick = function(){
-                    that.u = that.user.value;
-                    that.p = that.pass.value;
-                    that.setMsg();
-                }
-            }
-            setMsg(){
-                this.msg = getCookie("userMsg") ? JSON.parse(getCookie("userMsg")) : [];
-                if(this.msg.length<1){
-                    this.msg.push({
-                        user:this.u,
-                        pass:this.p,
-                        onoff:0
-                    })
-                }else{
-                    var type = this.msg.some((val,idx)=>{
-                        return val.user === this.u;
-                    });
-                    if(type){
-                        this.span.innerHTML = "用户名重复";
-                    }else{
-                        this.msg.push({
-                            user:this.u,
-                            pass:this.p,
-                            onoff:0
-                        })
-                    }
-                }
-                setCookie("useMsg",JSON.stringify(this.msg));
-            }
-        }
-        new Register;
-    </script>
 
     <footer>
         <div class="margin">
@@ -150,4 +105,6 @@
         </div>
     </footer>
 </body>
+<script src="js/cookie.js"></script>
+<script src="js/register.js"></script>
 </html>

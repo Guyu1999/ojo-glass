@@ -15,7 +15,10 @@ body {
     float: left; }
     .welcome{
       display:none;
+      float:left;
+      height:28px;
     }
+    .welcome em{margin-left:15px;cursor: pointer;}
     #top .top-l h3 {
       float: left;
       margin-left: 5px;
