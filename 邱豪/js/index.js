@@ -64,7 +64,7 @@
         }
         function getTime(){
             var now=new Date().getTime();
-            var end=new Date("2019/12/13").getTime();
+            var end=new Date("2019/12/19").getTime();
             var temp=end-now;
             if(temp<=0)
             {
@@ -76,6 +76,15 @@
             var min=Math.floor(temp/(60*1000)%60);
             var hou=Math.floor(temp/(60*60*1000)%24);
             var day=Math.floor(temp/(24*60*60*1000));
+            if(hou<10){
+                hou = "0"+hou;
+            }
+            if(min<10){
+                min = "0"+min;
+            }
+            if(sec<10){
+                sec = "0"+sec;
+            }
             return hou+" : "+min+" : "+sec+"";
             }
         }
@@ -141,6 +150,103 @@
         })
     }
     list2();
+    //商品数据引入
+    class List{
+        constructor(){
+            this.url = "http://localhost/git/ojo-glass/邱豪/json/goods.json";
+            this.cont = document.querySelector(".advertbox");
+            this.hotgoods = document.querySelector(".hotgoods");
+            this.addEvent();
+            this.load();
+        }
+        load(){
+            var that = this;
+            ajaxGet(this.url,function(res){
+                that.res = JSON.parse(res);
+                that.display();
+            });
+        }
+        display(){
+            var str = "";
+            for(var i = 0;i<this.res.length;i++){
+                str += `<div class="advertgoods1" index="${this.res[i].goodsId}">
+                            <div class="img">
+                                <img src="${this.res[i].img}" alt="" class="details">
+                            </div>
+                            <p>
+                                <a href="details.html" class="details">${this.res[i].name}</a>
+                                <br>
+                                <span>本站价：</span><span class="pr-red">￥${this.res[i].price}</span>
+                            </p>
+                        </div>`;
+            }
+            this.cont.innerHTML = str;
+
+            var str1 = "";
+            for(var j = 0;j<this.res.length;j++){
+                str1 += `<li index="${this.res[j].goodsId}">
+                            <div class="hotimgs">
+                                    <img src="${this.res[j].img}" alt="" class="details1">
+                                <span>直降6%</span>
+                            </div>
+                            <div><p class="details1">${this.res[j].name}</p></div>
+                            <div class="hotprice">
+                                <div class="hotprice1">
+                                    <span>￥${this.res[j].oprice}</span>
+                                    <span class="tep">￥${this.res[j].price}</span>
+                                </div>
+                                <span id="goshop" class="details1">去抢购</span>
+                            </div>
+                        </li>`;
+            }
+            this.hotgoods.innerHTML = str1;
+        }
+        addEvent(){
+            var that = this;
+            this.cont.addEventListener("click",function(eve){
+                var e = eve || window.event;
+                var target = e.target || e.srcElement;
+                if(target.className == "details"){
+                    that.id = target.parentNode.parentNode.getAttribute("index");
+                    that.setCookie();
+                }
+            })
+            this.hotgoods.addEventListener("click",function(eve){
+                var e = eve || window.event;
+                var target = e.target || e.srcElement;
+                if(target.className == "details1"){
+                    that.id = target.parentNode.parentNode.getAttribute("index");
+                    that.setCookie();
+                }
+            })
+        }
+        setCookie(){
+            this.goods = getCookie("indexCookie") ? JSON.parse(getCookie("indexCookie")) : [];
+            if(this.goods.length < 1){
+                this.goods.push({
+                    id:this.id,
+                    num:1
+                })
+            }else{
+                var i = 0;
+                var onoff = this.goods.some((val,idx)=>{
+                    i = idx;
+                    return val.id === this.id;
+                })
+                if(!onoff){
+                    this.goods.push({
+                        id:this.id,
+                        num:1
+                    })
+                }else{
+                    this.goods[i].num++;
+                }
+            }
+            console.log(this.id)
+            setCookie("indexCookie",JSON.stringify(this.goods))
+        }
+    }
+    new List;
 
 
 })(jQuery)

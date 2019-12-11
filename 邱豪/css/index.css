@@ -380,20 +380,28 @@ html{
         height: 21px;
         text-indent: 10px; }
     #advert .advert-r .advertbox {
+      overflow: hidden;
       height: 278px;
       width: 948px;
       border: 1px solid #ddd; }
       #advert .advert-r .advertbox .advertgoods1 {
+        margin:0 8px;
         text-align: center;
         float: left; }
         #advert .advert-r .advertbox .advertgoods1 .img img {
-          padding: 15px 10px;
+          cursor: pointer;
+          padding: 15px 5px;
           height: 192px;
           width: 290px; }
         #advert .advert-r .advertbox .advertgoods1 p {
           font: 12px/21px ""; }
           #advert .advert-r .advertbox .advertgoods1 p a {
+            overflow: hidden;text-overflow:ellipsis;
+            white-space: nowrap;display: inline-block;width:230px;
             color: #000; }
+            #advert .advert-r .advertbox .advertgoods1 p a:hover{
+              color:#f99;
+            }
           #advert .advert-r .advertbox .advertgoods1 p span {
             color: #999; }
           #advert .advert-r .advertbox .advertgoods1 p span.pr-red {
@@ -424,12 +432,13 @@ html{
       margin-right: 16px;
       color: #646464; }
   #hotbuy .hotgoods {
-    width: 110%;
+    height:305px;
     overflow: hidden; }
     #hotbuy .hotgoods li {
       height: 305px;
       float: left;
-      margin: 0 8px; }
+      margin-left: 7px;
+       }
       #hotbuy .hotgoods li .hotimgs {
         position: relative; }
         #hotbuy .hotgoods li .hotimgs img {
@@ -448,6 +457,8 @@ html{
           bottom: 10px;
           right: 15px; }
       #hotbuy .hotgoods li p {
+        overflow: hidden;text-overflow:ellipsis;
+            white-space: nowrap;display: inline-block;width:230px;
         font: 12px/32px ""; }
       #hotbuy .hotgoods li .hotprice {
         margin-top: 10px; }
@@ -458,11 +469,17 @@ html{
             display: block;
             font-size: 14px;
             color: #b7b7b7; }
+            #hotbuy .hotgoods li .details1{
+              cursor: pointer;
+            }
+            #hotbuy .hotgoods li .details1:hover{
+              color:#f99;
+            }
           #hotbuy .hotgoods li .hotprice .hotprice1 span.tep {
             text-decoration: none;
             color: #ff5555;
             font-size: 18px; }
-        #hotbuy .hotgoods li .hotprice a {
+        #hotbuy .hotgoods li .hotprice #goshop {
           float: right;
           width: 110px;
           height: 40px;
@@ -512,6 +529,7 @@ main {
       main .imgbox img{
         position: absolute;
       }
+    
       main .imgbox2{
         position: relative;
         height:250px;
@@ -765,6 +783,7 @@ main {
       color: #666; }
 
 #email {
+  background:#fff;
   height: 94px;
   border-bottom: 1px solid #ddd; }
   #email .myemail {
@@ -786,11 +805,12 @@ main {
     float: right; }
 
 footer {
+  background:#fff;
   text-align: center;
   height: 121px; }
   footer h4 {
     color: #999;
-    margin-top: 10px;
+    padding-top: 10px;
     text-align: left; }
   footer .sm ul {
     height: 16px;
