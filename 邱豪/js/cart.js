@@ -41,6 +41,7 @@
             this.url = "http://localhost/git/ojo-glass/邱豪/json/goods.json";
             this.tbody = document.querySelector("tbody");
             this.total = document.getElementById("total");
+            this.clearall = document.getElementById("clearall");
             this.load();
             this.addEvent();
         }
@@ -106,6 +107,12 @@
             //         console.log(this.total);
             //     }
             // })
+            this.clearall.onclick = function(){
+                if(confirm("确定清空购物车吗？")){
+                    removeCookie("goodsCookie");
+                    location.reload();
+                }
+            }
         }
         changeCookie(cb){
             for(var i=0;i<this.goods.length;i++){
