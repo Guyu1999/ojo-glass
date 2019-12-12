@@ -53,6 +53,7 @@
         }
         getCookie(){
             this.goods =getCookie("goodsCookie") ? JSON.parse(getCookie("goodsCookie")) : [];
+            
             this.display();
         }
         display(){

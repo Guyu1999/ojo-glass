@@ -333,7 +333,6 @@ main .goodsinfo {
       height: 440px;
       border: 1px solid #e3e3e3; }
     main .goodsinfo .info-l .sBox span {
-      background: url(../imgs/big-glass1.png);
       background-size: 440px 440px;
       position: absolute;
       left: 0;
@@ -343,8 +342,8 @@ main .goodsinfo {
       width: 440px;
       height: 440px;
       position: absolute;
-      left: 810px;
-      top: 215px;
+      left: 460px;
+      top: 0px;
       overflow: hidden;
       display: none; }
     main .goodsinfo .info-l .bBox img {
