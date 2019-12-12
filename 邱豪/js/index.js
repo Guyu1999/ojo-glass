@@ -223,7 +223,7 @@
             })
         }
         setCookie(){
-            this.goods = getCookie("goodsCookie") ? JSON.parse(getCookie("indexCookie")) : [];
+            this.goods = getCookie("goodsCookie") ? JSON.parse(getCookie("goodsCookie")) : [];
             if(this.goods.length < 1){
                 this.goods.push({
                     id:this.id,
@@ -244,7 +244,10 @@
                     this.goods[i].num++;
                 }
             }
-            console.log(this.id)
+            if(this.goods.length>1){
+                this.goods.splice(0,1);
+                setCookie("goodsCookie",JSON.stringify(this.goods))
+            }
             setCookie("goodsCookie",JSON.stringify(this.goods))
         }
     }

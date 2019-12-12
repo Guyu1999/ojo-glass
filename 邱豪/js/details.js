@@ -68,6 +68,7 @@
         constructor(){
             this.url = "http://localhost/git/ojo-glass/邱豪/json/goods.json";
             this.goodsinfo = document.getElementById("goodsinfo");
+            this.top1 = document.getElementById("top")
             this.load();
             this.addinfo();
         }
@@ -80,6 +81,11 @@
         getCookie(){
             this.goods =getCookie("goodsCookie") ? JSON.parse(getCookie("goodsCookie")) : [];
             this.display();
+            if(this.goods.length>1){
+                this.goods.splice(0,1);
+                setCookie("goodsCookie",JSON.stringify(this.goods))
+            }
+            console.log(this.goods)
         }
         display(){
             var str = "";
@@ -90,7 +96,7 @@
                         str += `<div class="info-l" index="${this.res[i].goodsId}">
                         <div class="sBox">
                         <img src="${this.res[i].img}"/>
-                        <span style="background: url(${this.res[i].img});"></span>
+                        <span style="background: url(${this.res[i].img});background-size: 440px 440px;"></span>
                         <div class="bBox">
                         <img src="${this.res[i].img}"/>
                         </div>
@@ -192,6 +198,8 @@
                         alert("加入购物车成功！")
                     }
                 })
+                this.info = document.getElementsByClassName("info-l")
+                console.log(this.info)
             }
     }
     new Rundata();

@@ -70,7 +70,7 @@
             var str = "";
             for(var i = 0;i<this.res.length;i++){
                 str += `<li class="box" index="${this.res[i].goodsId}">
-                            <a href="#"><img src="${this.res[i].img}" alt="" /></a>
+                            <a href="details.html"><img src="${this.res[i].img}" alt="" class="turn"/></a>
                             <div class="goods-price">
                                 <span>￥${this.res[i].oprice}</span>
                                 <span class="teprice">￥${this.res[i].price}</span>
@@ -87,6 +87,14 @@
                 var e = eve || window.event;
                 var target = e.target || e.srcElement;
                 if(target.className == "addcart"){
+                    that.id = target.parentNode.parentNode.getAttribute("index");
+                    that.setCookie();
+                }
+            })
+            this.cont.addEventListener("click",function(eve){
+                var e = eve || window.event;
+                var target = e.target || e.srcElement;
+                if(target.className == "turn"){
                     that.id = target.parentNode.parentNode.getAttribute("index");
                     that.setCookie();
                 }
@@ -114,7 +122,10 @@
                     this.goods[i].num++;
                 }
             }
-            console.log(this.id)
+            if(this.goods.length>1){
+                this.goods.splice(0,1);
+                setCookie("goodsCookie",JSON.stringify(this.goods))
+            }
             setCookie("goodsCookie",JSON.stringify(this.goods))
         }
     }
