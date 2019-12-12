@@ -179,24 +179,24 @@
                                 <span>本站价：</span><span class="pr-red">￥${this.res[i].price}</span>
                             </p>
                         </div>`;
-            }
-            this.cont.innerHTML = str;
-
-            var str1 = "";
-            for(var j = 0;j<this.res.length;j++){
-                str1 += `<li index="${this.res[j].goodsId}">
-                            <div class="hotimgs">
-                                    <img src="${this.res[j].img}" alt="" class="details1">
-                                <span>直降6%</span>
-                            </div>
-                            <div><p class="details1">${this.res[j].name}</p></div>
-                            <div class="hotprice">
-                                <div class="hotprice1">
-                                    <span>￥${this.res[j].oprice}</span>
-                                    <span class="tep">￥${this.res[j].price}</span>
-                                </div>
-                                <span id="goshop" class="details1">去抢购</span>
-                            </div>
+                    }
+                    this.cont.innerHTML = str;
+                    
+                    var str1 = "";
+                    for(var j = 0;j<this.res.length;j++){
+                        str1 += `<li index="${this.res[j].goodsId}">
+                        <div class="hotimgs">
+                        <img src="${this.res[j].img}" alt="" class="details1">
+                        <span>直降6%</span>
+                        </div>
+                        <div><p class="details1">${this.res[j].name}</p></div>
+                        <div class="hotprice">
+                        <div class="hotprice1">
+                        <span>￥${this.res[j].oprice}</span>
+                        <span class="tep">￥${this.res[j].price}</span>
+                        </div>
+                        <span id="goshop" class="details1">去抢购</span>
+                        </div>
                         </li>`;
             }
             this.hotgoods.innerHTML = str1;
@@ -244,6 +244,7 @@
                     this.goods[i].num++;
                 }
             }
+            
             if(this.goods.length>1){
                 this.goods.splice(0,1);
                 setCookie("goodsCookie",JSON.stringify(this.goods))

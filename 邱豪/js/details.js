@@ -68,7 +68,8 @@
         constructor(){
             this.url = "http://localhost/git/ojo-glass/邱豪/json/goods.json";
             this.goodsinfo = document.getElementById("goodsinfo");
-            this.top1 = document.getElementById("top")
+            this.top1 = document.getElementById("top");
+            this.table = document.getElementById("table");
             this.load();
             this.addinfo();
         }
@@ -80,12 +81,10 @@
         }
         getCookie(){
             this.goods =getCookie("goodsCookie") ? JSON.parse(getCookie("goodsCookie")) : [];
+            
             this.display();
-            if(this.goods.length>1){
-                this.goods.splice(0,1);
-                setCookie("goodsCookie",JSON.stringify(this.goods))
-            }
-            console.log(this.goods)
+            this.txtinfo();
+            
         }
         display(){
             var str = "";
@@ -188,8 +187,44 @@
                     }
                 }
                 this.goodsinfo.innerHTML = str;
-                console.log(window.location.href)
             }
+            txtinfo(){
+                var str1 = "";
+                // console.log(this.goodsinfo)
+                for(var i =0;i<this.res.length;i++){
+                    for(var j=0;j<this.goods.length;j++){
+                        if(this.res[i].goodsId === this.goods[j].id){
+                            str1 += `<tbody>
+                                        <tr>
+                                            <td align="right" class="tit">边框</td>
+                                            <td>${this.res[i].type}</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" class="tit">价格</td>
+                                            <td>${this.res[i].price}</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" class="tit">品牌</td>
+                                            <td>欧洁鸥/OJO</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" class="tit">框型</td>
+                                            <td>多边形</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" class="tit">材质</td>
+                                            <td>纯钛</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" class="tit">类型</td>
+                                            <td>钛架</td>
+                                        </tr>
+                                    </tbody> `
+                            }
+                        }
+                    }
+                    this.table.innerHTML = str1;
+                }
             addinfo(){
                 this.goodsinfo.addEventListener("click",function(eve){
                     var e = eve || window.event;
@@ -198,8 +233,8 @@
                         alert("加入购物车成功！")
                     }
                 })
-                this.info = document.getElementsByClassName("info-l")
-                console.log(this.info)
+                
+                
             }
     }
     new Rundata();

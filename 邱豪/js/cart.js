@@ -63,9 +63,9 @@
                     if(this.res[i].goodsId === this.goods[j].id){
                         str += `<tr class="goods" index="${this.res[i].goodsId}">
                                     <td><input type="checkbox" class="checked"></td>
-                                    <td class="imgs">
-                                        <img src="${this.res[i].img}">
-                                        <span>${this.res[i].name}</span>
+                                    <td class="imgs" style="cursor:pointer";>
+                                        <img src="${this.res[i].img}" class="turnon">
+                                        <span class="turnon">${this.res[i].name}</span>
                                     </td>
                                     <td>${this.res[i].color}</td>
                                     <td>${this.res[i].price}</td>
@@ -89,6 +89,15 @@
                     that.changeCookie(function(i){
                         that.goods.splice(i,1);
                     });
+                }
+            })
+            this.tbody.addEventListener("click",function(eve){
+                var e = eve || window.event;
+                var target = e.target || e.srcElement;
+                if(target.className == "turnon"){
+                    that.id = target.parentNode.parentNode.getAttribute("index");
+                    target.parentNode.remove();
+                    window.location.href = "details.html";
                 }
             })
             this.tbody.addEventListener("input",function(eve){

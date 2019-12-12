@@ -3,59 +3,80 @@
     "name":"欧洁鸥OJO 锌矿无框纯钛眼镜 男士睿智上超清眼镜太假银色",
     "price":"368","oprice":"480",
     "goodsId":"1",
-    "color":"黑色"
+    "color":"黑色",
+    "type":"全框",
+    "frametype":"多边形"
 },{
     "img":"json/jsonimg/goods2.jpg",
     "name":"欧洁鸥OJO 复古圆框纯钛眼镜 男女超宽文艺小清新函数版学生镜框",
     "price":"499","oprice":"4887",
     "goodsId":"2",
-    "color":"白色"
+    "color":"白色",
+    "type":"半框",
+    "frametype":"圆形"
+
 },{
     "img":"json/jsonimg/goods3.jpg",
     "name":"欧洁鸥OJO 新款纯钛复古圆框眼镜 男女尼龙圈潮流近视眼镜抬价",
     "price":"9444","oprice":"47777",
     "goodsId":"3",
-    "color":"银色"
+    "color":"银色",
+    "type":"无框",
+    "frametype":"多边形"
 },{
     "img":"json/jsonimg/goods4.jpg",
-    "name":"",
+    "name":"欧洁鸥OJO 锌纯钛眼镜 男士睿智无框纯钛眼镜 男士睿智上超清眼镜太",
     "price":"399","oprice":"480",
     "goodsId":"4",
-    "color":"灰色"
+    "color":"灰色",
+    "type":"全框",
+    "frametype":"正方形"
 },{
     "img":"json/jsonimg/goods5.jpg",
     "name":"欧洁鸥OJO 欧杰欧OJO 薛之谦同款 男女经典复古半框近视钛架 黑灰色",
     "price":"36","oprice":"480",
     "goodsId":"5",
-    "color":"亮色"
+    "color":"亮色",
+    "type":"半框",
+    "frametype":"圆形"
 },{
     "img":"json/jsonimg/goods6.jpg",
     "name":"欧洁鸥OJO 超级显卡四大皆空了超清眼镜太假银色",
     "price":"38","oprice":"40",
     "goodsId":"6",
-    "color":"棕色"
+    "color":"棕色",
+    "type":"无框",
+    "frametype":"多边形"
 },{
     "img":"json/jsonimg/goods7.jpg",
     "name":"欧洁鸥OJO 锌纯钛眼镜 男士睿智无框纯钛眼镜 男士睿智上超清眼镜太假银色",
     "price":"388","oprice":"440",
     "goodsId":"123sdas",
-    "color":"米色"
+    "color":"米色",
+    "type":"半框",
+    "frametype":"正方形"
 },{
     "img":"json/jsonimg/goods8.jpg",
     "name":"欧洁鸥OJO 宇宙无敌是设计师镜 男士睿智上超清眼镜太假银色",
     "price":"68","oprice":"460",
     "goodsId":"as1da",
-    "color":"紫色"
+    "color":"紫色",
+    "type":"无框",
+    "frametype":"圆形"
 },{
     "img":"json/jsonimg/goods9.jpg",
     "name":"欧洁鸥OJO 宇宙无敌是设计师镜 男士睿智上超清眼镜太假银sadasda123色",
     "price":"668","oprice":"960",
     "goodsId":"as1d12a",
-    "color":"灰色"
+    "color":"灰色",
+    "type":"全框",
+    "frametype":"正方形"
 },{
     "img":"json/jsonimg/goods10.jpg",
     "name":"欧敌是设计师镜 男士睿智上超清眼镜太假银色",
     "price":"168","oprice":"1160",
     "goodsId":"as113da",
-    "color":"红色"
+    "color":"红色",
+    "type":"无框",
+    "frametype":"多边形"
 }]

@@ -319,10 +319,10 @@ main .snva {
     color: #333; }
 
 main .goodsinfo {
-  height:636px;
+  height:575px;
    }
   main .goodsinfo .info-l {
-    height: 600px;
+    height: 575px;
     float: left; }
     main .goodsinfo .info-l .sBox {
       width: 440px;
@@ -419,7 +419,9 @@ main .goodsinfo {
         border: 1px solid #f00; }
     main .goodsinfo .info-m .num1 {
       border-bottom: 1px dashed #ddd;
-      height: 45px; }
+      height: 55px;
+      margin-top:20px;
+    }
       main .goodsinfo .info-m .num1 dl dt {
         float: left;
         color: #999;
@@ -475,6 +477,56 @@ main .goodsinfo {
       text-align: center; }
       main .goodsinfo .info-r ul li img {
         display: block; }
+
+#xiangxi{
+  
+}
+#xiangxi h3{
+  height:40px;
+}
+#xiangxi h3 span{
+  height:36px;
+  width:120px;
+  color:#e31939;
+  font:12px/36px "";
+  border:1px solid #e1e1e1;
+  text-align: center;
+  display:inline-block;
+  cursor:pointer;
+  font-weight: 700;
+}
+#xiangxi h3 span.zhu{
+  border-top:2px solid #e31939;
+}
+#xiangxi .cont{}
+#xiangxi .cont h4{
+  height:36px;
+  border:1px solid #eee;
+  text-indent: 20px;
+  font:18px/36px "";
+  background:#fafafa;
+  margin:10px 0;
+}
+#xiangxi .cont table{
+  width:1190px;
+  border-color:#dcdcdc;
+}
+.cont table thead th{
+  height:32px;
+  font:12px/32px "";
+  font-weight: 700;
+  text-align: left;
+  text-indent:30px;
+  background:#f5fafe;
+}
+.cont table tbody td{
+  height:28px;
+  padding:0 10px;
+}
+.cont table tbody .tit{
+  width:146px;
+  background:#f5fafe;
+}
 
 #map {
   margin-top: 35px;
